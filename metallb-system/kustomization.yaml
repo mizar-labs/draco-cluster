@@ -6,7 +6,7 @@ resources:
 configMapGenerator:
   - name: config
     files:
-      - config/configmap.yaml
+      - config/config
 
 generatorOptions:
   disableNameSuffixHash: true

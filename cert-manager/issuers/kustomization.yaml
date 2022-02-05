@@ -1,0 +1,5 @@
+kind: Kustomization
+resources:
+  - staging-le.yaml
+  - prod-le.yaml
+apiVersion: kustomize.config.k8s.io/v1beta1
