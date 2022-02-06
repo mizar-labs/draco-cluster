@@ -1,0 +1,25 @@
+apiVersion: networking.k8s.io/v1
+kind: Ingress
+metadata:
+  name: foundryvtt
+  namespace: foundryvtt
+  annotations:
+    kubernetes.io/ingress.class: "nginx"
+    cert-manager.io/cluster-issuer: "letsencrypt-staging"
+
+spec:
+  tls:
+    - hosts:
+        - foundryvtt.lab.scalar.cloud
+      secretName: foundryvtt-tls
+  rules:
+    - host: foundryvtt.lab.scalar.cloud
+      http:
+        paths:
+          - path: /
+            pathType: Prefix
+            backend:
+              service:
+                name: foundryvtt-web
+                port:
+                  name: web
