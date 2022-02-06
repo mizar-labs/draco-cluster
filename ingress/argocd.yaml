@@ -1,8 +1,8 @@
 apiVersion: networking.k8s.io/v1
 kind: Ingress
 metadata:
-  name: grafana
-  namespace: monitoring
+  name: argocd
+  namespace: argocd
   annotations:
     kubernetes.io/ingress.class: "nginx"
     cert-manager.io/cluster-issuer: "letsencrypt-prod"
@@ -10,16 +10,16 @@ metadata:
 spec:
   tls:
     - hosts:
-        - grafana.lab.scalar.cloud
-      secretName: grafana-tls
+        - argocd.lab.scalar.cloud
+      secretName: argo-tls
   rules:
-    - host: grafana.lab.scalar.cloud
+    - host: argocd.lab.scalar.cloud
       http:
         paths:
           - path: /
             pathType: Prefix
             backend:
               service:
-                name: grafana
+                name: argocd-server
                 port:
-                  number: 3000
+                  name: http
