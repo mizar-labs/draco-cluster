@@ -3,4 +3,5 @@ resources:
   - grafana.yaml
   - argocd.yaml
   - foundryvtt.yaml
+  - wikijs.yaml
 apiVersion: kustomize.config.k8s.io/v1beta1
