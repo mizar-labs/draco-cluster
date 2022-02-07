@@ -21,7 +21,7 @@ spec:
           image: mbround18/foundryvtt-docker:latest
           env:
             - name: APPLICATION_HOST
-              value: "foundryvtt.lab.scalar.cloud"
+              value: "foundryvtt.draco.scalar.cloud"
             - name: APPLICATION_PORT
               value: "4444"
             - name: SSL_PROXY
