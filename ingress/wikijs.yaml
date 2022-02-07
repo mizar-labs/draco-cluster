@@ -22,4 +22,4 @@ spec:
               service:
                 name: draco-wikijs
                 port:
-                  name: http
+                  name: https
