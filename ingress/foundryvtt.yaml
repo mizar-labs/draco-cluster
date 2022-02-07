@@ -5,15 +5,15 @@ metadata:
   namespace: foundryvtt
   annotations:
     kubernetes.io/ingress.class: "nginx"
-    cert-manager.io/cluster-issuer: "letsencrypt-prod"
+    cert-manager.io/cluster-issuer: "letsencrypt-staging"
 
 spec:
   tls:
     - hosts:
-        - foundryvtt.lab.scalar.cloud
-      secretName: foundryvtt-tls
+        - foundryvtt.draco.scalar.cloud
+      secretName: foundryvtt-draco-tls
   rules:
-    - host: foundryvtt.lab.scalar.cloud
+    - host: foundryvtt.draco.scalar.cloud
       http:
         paths:
           - path: /

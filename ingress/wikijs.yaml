@@ -5,15 +5,15 @@ metadata:
   namespace: wikijs
   annotations:
     kubernetes.io/ingress.class: "nginx"
-    cert-manager.io/cluster-issuer: "letsencrypt-prod"
+    cert-manager.io/cluster-issuer: "letsencrypt-staging"
 
 spec:
   tls:
     - hosts:
-        - wiki.lab.scalar.cloud
-      secretName: wikijs-tls
+        - wiki.draco.scalar.cloud
+      secretName: wikijs-draco-tls
   rules:
-    - host: wiki.lab.scalar.cloud
+    - host: wiki.draco.scalar.cloud
       http:
         paths:
           - path: /

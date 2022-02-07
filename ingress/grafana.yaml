@@ -5,15 +5,15 @@ metadata:
   namespace: monitoring
   annotations:
     kubernetes.io/ingress.class: "nginx"
-    cert-manager.io/cluster-issuer: "letsencrypt-prod"
+    cert-manager.io/cluster-issuer: "letsencrypt-staging"
 
 spec:
   tls:
     - hosts:
-        - grafana.lab.scalar.cloud
-      secretName: grafana-tls
+        - grafana.draco.scalar.cloud
+      secretName: grafana-draco-tls
   rules:
-    - host: grafana.lab.scalar.cloud
+    - host: grafana.draco.scalar.cloud
       http:
         paths:
           - path: /

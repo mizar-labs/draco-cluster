@@ -5,15 +5,15 @@ metadata:
   namespace: argocd
   annotations:
     kubernetes.io/ingress.class: "nginx"
-    cert-manager.io/cluster-issuer: "letsencrypt-prod"
+    cert-manager.io/cluster-issuer: "letsencrypt-staging"
 
 spec:
   tls:
     - hosts:
-        - argocd.lab.scalar.cloud
-      secretName: argo-tls
+        - argocd.draco.scalar.cloud
+      secretName: argo-draco-tls
   rules:
-    - host: argocd.lab.scalar.cloud
+    - host: argocd.draco.scalar.cloud
       http:
         paths:
           - path: /
