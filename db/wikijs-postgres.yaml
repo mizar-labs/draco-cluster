@@ -1,20 +1,16 @@
 apiVersion: kubedb.com/v1alpha2
 kind: Postgres
 metadata:
-  name: wikijs-postgres
-  namespace: wikijs
+  name: quick-postgres
+  namespace: demo
 spec:
-  version: "9.6-v1"
-  replicas: 2
+  version: "13.2"
+  storageType: Durable
   storage:
     storageClassName: "longhorn"
     accessModes:
       - ReadWriteOnce
     resources:
       requests:
-        storage: 50Mi
-  archiver:
-    storage:
-      storageSecretName: s3-secret
-      s3:
-        bucket: kubedb-wikijs-backups
+        storage: 1Gi
+  terminationPolicy: DoNotTerminate
