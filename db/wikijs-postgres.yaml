@@ -1,8 +1,8 @@
 apiVersion: kubedb.com/v1alpha2
 kind: Postgres
 metadata:
-  name: quick-postgres
-  namespace: demo
+  name: wikijs-postgres
+  namespace: wikijs
 spec:
   version: "13.2"
   storageType: Durable
