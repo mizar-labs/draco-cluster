@@ -5,12 +5,11 @@ metadata:
   namespace: wikijs
 spec:
   version: "13.2"
-  storageType: Durable
   storage:
     storageClassName: "longhorn"
     accessModes:
       - ReadWriteOnce
     resources:
       requests:
-        storage: 1Gi
+        storage: 5Gi
   terminationPolicy: DoNotTerminate
