@@ -18,20 +18,16 @@ spec:
     spec:
       containers:
         - name: foundryvtt-web
-          image: mbround18/foundryvtt-docker:latest
-          env:
-            - name: APPLICATION_HOST
-              value: "foundryvtt.draco.scalar.cloud"
-            - name: APPLICATION_PORT
-              value: "4444"
-            - name: SSL_PROXY
-              value: "false"
+          image: felddy/foundryvtt:release
+          envFrom:
+            - secretRef:
+                name: foundryvtt
           ports:
             - name: web
-              containerPort: 4444
+              containerPort: 30000
           volumeMounts:
             - name: foundryvtt-data-persistent-storage
-              mountPath: /foundrydata
+              mountPath: /data
       volumes:
         - name: foundryvtt-data-persistent-storage
           persistentVolumeClaim:
