@@ -2,11 +2,5 @@ namespace: metallb-system
 
 resources:
   - github.com/metallb/metallb//manifests?ref=v0.13.4
-
-configMapGenerator:
-  - name: config
-    files:
-      - config/config
-
-generatorOptions:
-  disableNameSuffixHash: true
+  - advertisement.yaml
+  - ip-address-pool.yaml
