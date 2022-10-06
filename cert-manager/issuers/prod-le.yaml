@@ -6,7 +6,7 @@ metadata:
 spec:
   acme:
     server: https://acme-v02.api.letsencrypt.org/directory
-    email: miles.seth@gmail.com
+    email: smiles@scalar.cloud
 
     # Name of a secret used to store the ACME account private key
     privateKeySecretRef:
@@ -22,7 +22,7 @@ spec:
             # reference: https://docs.cert-manager.io/en/latest/tasks/issuers/setup-acme/dns01/google.html
             region: us-east-1
             hostedZoneID: ZQR3FVHS867CH
-            accessKeyID: AKIARZJTGZB7PKHESVFU
+            accessKeyID: AKIARZJTGZB7LEHM5D7A
             # This is the secret used to access the service account
             secretAccessKeySecretRef:
               name: aws-config
