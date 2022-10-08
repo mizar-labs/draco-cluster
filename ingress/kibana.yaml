@@ -1,25 +1,24 @@
 apiVersion: networking.k8s.io/v1
 kind: Ingress
 metadata:
-  name: argocd
-  namespace: argocd
+  name: kibana
+  namespace: default
   annotations:
     kubernetes.io/ingress.class: "nginx"
     cert-manager.io/cluster-issuer: "letsencrypt-prod"
-
 spec:
   tls:
     - hosts:
-        - argocd.draco.scalar.cloud
-      secretName: argo-draco-tls
+        - kibana.draco.scalar.cloud
+      secretName: kibana-draco-tls
   rules:
-    - host: argocd.draco.scalar.cloud
+    - host: kibana.draco.scalar.cloud
       http:
         paths:
           - path: /
-            pathType: Prefix
+            pathType: ImplementationSpecific
             backend:
               service:
-                name: argocd-server
+                name: kibana-kb-http
                 port:
-                  name: http
+                  number: 5601

@@ -1,0 +1,6 @@
+kind: Kustomization
+resources:
+  - elasticsearch.yaml
+  - filebeat-autodiscover.yaml
+  - kibana.yaml
+  - metricbeat-fleet.yaml

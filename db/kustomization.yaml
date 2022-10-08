@@ -1,5 +1,0 @@
-kind: Kustomization
-resources:
-  #- redis-statestore.yaml
-  - wikijs-postgres.yaml
-apiVersion: kustomize.config.k8s.io/v1beta1
