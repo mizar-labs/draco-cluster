@@ -3,4 +3,7 @@ resources:
   - elasticsearch.yaml
   - filebeat-autodiscover.yaml
   - kibana.yaml
-  - metricbeat-fleet.yaml
+  - fleet-server.yaml
+  - fleet-agents.yaml
+  - metricbeat.yaml
+
