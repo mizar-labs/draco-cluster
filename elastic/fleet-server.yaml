@@ -3,6 +3,10 @@ kind: Agent
 metadata:
   name: fleet-server
 spec:
+  http:
+    tls:
+      selfSignedCertificate:
+        disabled: true
   version: 8.4.2
   kibanaRef:
     name: kibana
