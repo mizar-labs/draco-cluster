@@ -11,19 +11,42 @@ spec:
     heartbeat.monitors:
     - type: tcp
       id: elastic-internal-route
-      name: Elastic Internal Route
+      name: Elasticsearch Cluster
       schedule: '@every 5s'
       hosts: ["elasticsearch-es-http.default.svc:9200"]
-    - type: tcp
-      id: kibana-internal-route
-      name: Kibana Internal Route
+    - type: http
+      id: kibana-ui
+      name: Kibana
       schedule: '@every 5s'
-      hosts: ["kibana-kb-http.default.svc:5601"]
+      hosts: ["https://kibana.draco.scalar.cloud:443"]
     - type: http
       id: argocd-service
       name: Draco ArgoCD
       hosts: ["https://argocd.draco.scalar.cloud:443"]
       schedule: '@every 5s'
+    - type: http
+      id: grafana-service
+      name: Grafana
+      hosts: ["https://grafana.draco.scalar.cloud:443"]
+      schedule: '@every 5s'
+    - type: http
+      id: ha-service
+      name: Home Assistant
+      hosts: ["https://home-assistant.draco.scalar.cloud:443"]
+      schedule: '@every 5s'
+    - type: http
+      id: ha-code-service
+      name: Home Assistant Code Server
+      hosts: ["https://ha-code.draco.scalar.cloud:443"]
+      schedule: '@every 5s'
+    - type: http
+      id: longhorn-service
+      name: Longhorn UI
+      hosts: ["https://longhorn.draco.scalar.cloud:443"]
+      schedule: '@every 5s'
+
+
+
   deployment:
     replicas: 1
     podTemplate:
