@@ -1,7 +1,7 @@
 apiVersion: agent.k8s.elastic.co/v1alpha1
 kind: Agent
 metadata:
-  name: fleet-server
+  name: fleet-server-external
 spec:
   http:
     service:
@@ -26,7 +26,7 @@ spec:
 apiVersion: agent.k8s.elastic.co/v1alpha1
 kind: Agent
 metadata:
-  name: fleet-server-internal
+  name: fleet-server
 spec:
   version: 8.4.2
   kibanaRef:
