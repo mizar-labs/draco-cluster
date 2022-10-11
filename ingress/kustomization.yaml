@@ -4,7 +4,7 @@ resources:
   - argocd.yaml
   - home-assistant-code.yaml
   - home-assistant.yaml
-#  - kibana.yaml
+  - kibana.yaml
 #  - foundryvtt.yaml
   - longhorn.yaml
 #  - fleet-server.yaml
