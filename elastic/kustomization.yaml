@@ -7,4 +7,5 @@ resources:
   - fleet-server.yaml
   - fleet-agents.yaml
   - metricbeat.yaml
+  - heartbeat.yaml
 
