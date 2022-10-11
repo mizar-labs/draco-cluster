@@ -8,5 +8,4 @@ resources:
 #  - foundryvtt.yaml
   - longhorn.yaml
 #  - fleet-server.yaml
-  - statping.yaml
 apiVersion: kustomize.config.k8s.io/v1beta1
