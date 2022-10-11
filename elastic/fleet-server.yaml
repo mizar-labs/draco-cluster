@@ -3,6 +3,10 @@ kind: Agent
 metadata:
   name: fleet-server
 spec:
+  http:
+    service:
+      spec:
+        type: LoadBalancer
   version: 8.4.2
   kibanaRef:
     name: kibana
