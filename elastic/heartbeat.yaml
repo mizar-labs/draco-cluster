@@ -37,12 +37,12 @@ spec:
     - type: http
       id: ha-code-service
       name: Home Assistant Code Server
-      hosts: ["https://ha-code.draco.scalar.cloud:443"]
+      hosts: ["home-assistant-codeserver.home-assistant.svc:12321"]
       schedule: '@every 5s'
     - type: http
       id: longhorn-service
       name: Longhorn UI
-      hosts: ["https://longhorn.draco.scalar.cloud:443"]
+      hosts: ["longhorn-frontend.longhorn-system.svc:80"]
       schedule: '@every 5s'
 
 
