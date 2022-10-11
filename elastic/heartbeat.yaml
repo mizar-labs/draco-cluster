@@ -10,11 +10,20 @@ spec:
   config:
     heartbeat.monitors:
     - type: tcp
+      id: elastic-internal-route
+      name: Elastic Internal Route
       schedule: '@every 5s'
       hosts: ["elasticsearch-es-http.default.svc:9200"]
     - type: tcp
+      id: kibana-internal-route
+      name: Kibana Internal Route
       schedule: '@every 5s'
       hosts: ["kibana-kb-http.default.svc:5601"]
+    - type: http
+      id: argocd-service
+      name: Draco ArgoCD
+      hosts: ["https://argocd.draco.scalar.cloud:443"]
+      schedule: '@every 5s'
   deployment:
     replicas: 1
     podTemplate:
