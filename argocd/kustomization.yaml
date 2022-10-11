@@ -1,0 +1,11 @@
+kind: Kustomization
+namespace: argocd
+resources:
+  - install.yaml
+  - application-controller.yaml
+  - applicationset-controller.yaml
+  - argocd-server.yaml
+  - dex.yaml
+  - notifications-server.yaml
+  - redis.yaml
+  - repo-server.yaml
