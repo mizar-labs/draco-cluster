@@ -12,6 +12,15 @@ spec:
   daemonSet:
     podTemplate:
       spec:
+        containers:
+        - name: agent
+          resources:
+            requests:
+              memory: 500Mi
+              cpu: 0.5
+            limits:
+              memory: 500Mi
+              cpu: 0.5
         serviceAccountName: elastic-agent
         hostNetwork: true
         dnsPolicy: ClusterFirstWithHostNet
