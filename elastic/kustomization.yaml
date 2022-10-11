@@ -6,6 +6,5 @@ resources:
   - kibana.yaml
   - fleet-server.yaml
   - fleet-agents.yaml
-  - metricbeat.yaml
   - heartbeat.yaml
 
