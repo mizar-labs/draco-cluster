@@ -7,6 +7,16 @@ spec:
   nodeSets:
   - name: default
     count: 3
+    podTemplate:
+      spec:
+        containers:
+        - name: elasticsearch
+          resources:
+            requests:
+              memory: 20Gi
+              cpu: 6
+            limits:
+              memory: 20Gi
     volumeClaimTemplates:
     - metadata:
         name: elasticsearch-data # Do not change this name unless you set up a volume mount for the data path.
