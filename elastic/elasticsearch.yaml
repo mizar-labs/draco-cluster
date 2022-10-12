@@ -3,6 +3,10 @@ kind: Elasticsearch
 metadata:
   name: elasticsearch
 spec:
+  http:
+    tls:
+      selfSignedCertificate:
+        disabled: true
   version: 8.4.2
   nodeSets:
   - name: default
