@@ -1,10 +1,10 @@
 kind: Kustomization
 namespace: default
 resources:
-  - elasticsearch.yaml
-  - filebeat-autodiscover.yaml
-  - kibana.yaml
-  - fleet-server.yaml
-  - fleet-agents.yaml
-  - heartbeat.yaml
+  #- elasticsearch.yaml
+  #- filebeat-autodiscover.yaml
+  #- kibana.yaml
+  #- fleet-server.yaml
+  #- fleet-agents.yaml
+  #- heartbeat.yaml
 
