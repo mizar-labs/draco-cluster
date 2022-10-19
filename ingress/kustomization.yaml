@@ -8,4 +8,5 @@ resources:
 #  - foundryvtt.yaml
   - longhorn.yaml
   - elastic.yaml
+  - socks.yaml
 apiVersion: kustomize.config.k8s.io/v1beta1
