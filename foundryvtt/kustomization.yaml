@@ -1,7 +1,0 @@
-kind: Kustomization
-resources:
-  - deployment.yaml
-  - namespace.yaml
-  - persisted-volume-claim.yaml
-  - web-service.yaml
-apiVersion: kustomize.config.k8s.io/v1beta1
