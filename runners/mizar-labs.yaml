@@ -3,6 +3,7 @@ apiVersion: actions.summerwind.dev/v1alpha1
 kind: RunnerDeployment
 metadata:
   name: mizar-labs-runner
+  namespace: mizar-labs
 spec:
   # This will deploy 2 runners now
   replicas: 5
