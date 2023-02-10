@@ -1,0 +1,53 @@
+project: default
+source:
+  repoURL: 'https://itzg.github.io/minecraft-server-charts/'
+  targetRevision: 4.5.0
+  helm:
+    parameters:
+      - name: image.tag
+        value: java17
+      - name: livenessProbe.initialDelaySeconds
+        value: '600'
+      - name: mcbackup.persistence.backupDir.Size
+        value: 40Gi
+      - name: mcbackup.enabled
+        value: 'true'
+      - name: mcbackup.persistence.backupDir.enabled
+        value: 'true'
+      - name: minecraftServer.type
+        value: CURSEFORGE
+      - name: minecraftServer.cfServerMod
+        value: https://mizar-labs-minecraft.s3.amazonaws.com/modpacks/all-the-mods/Server-Files-1.0.10.zip
+      - name: minecraftServer.forgeInstallerUrl
+        value: https://mizar-labs-minecraft.s3.amazonaws.com/forge/forge-1.19.2-43.2.3-installer.jar
+      - name: minecraftServer.eula
+        value: 'TRUE'
+      - name: minecraftServer.version
+        value: 1.19.2
+      - name: minecraftServer.memory
+        value: 24576M
+      - name: persistence.dataDir.enabled
+        value: 'true'
+      - name: persistence.dataDir.Size
+        value: 20Gi
+      - name: minecraftServer.gameMode
+        value: creative
+      - name: minecraftServer.motd
+        value: All the mods 8 Creative Mode
+      - name: minecraftServer.rcon.password
+        value: areallygoodpassword
+      - name: minecraftServer.rcon.enabled
+        value: 'true'
+      - name: minecraftServer.query.enabled
+        value: 'true'
+      - name: minecraftServer.ops
+        value: Strange_Quark
+      - name: minecraftServer.serviceType
+        value: LoadBalancer
+  chart: minecraft
+destination:
+  server: 'https://kubernetes.default.svc'
+  namespace: minecraft
+syncPolicy:
+  syncOptions:
+    - CreateNamespace=true
