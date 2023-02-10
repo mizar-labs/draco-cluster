@@ -52,8 +52,6 @@ spec:
           value: 'true'
         - name: minecraftServer.ops
           value: ServerGopher, Strange_Quark
-        - name: minecraftServer.serviceType
-          value: LoadBalancer
     chart: minecraft
   destination:
     server: 'https://kubernetes.default.svc'
