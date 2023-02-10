@@ -34,14 +34,18 @@ source:
         value: creative
       - name: minecraftServer.motd
         value: All the mods 8 Creative Mode
-      - name: minecraftServer.rcon.password
-        value: areallygoodpassword
+      - name: minecraftServer.rcon.existingSecret
+        value: minecraft-secrets
+      - name: minecraftServer.rcon.secretKey
+        value: rcon-password
+      - name: minecraftServer.rcon.serviceType
+        value: LoadBalancer
       - name: minecraftServer.rcon.enabled
         value: 'true'
       - name: minecraftServer.query.enabled
         value: 'true'
       - name: minecraftServer.ops
-        value: Strange_Quark
+        value: ServerGopher
       - name: minecraftServer.serviceType
         value: LoadBalancer
   chart: minecraft
