@@ -1,4 +1,0 @@
-kind: Kustomization
-resources:
-  - creative
-apiVersion: kustomize.config.k8s.io/v1beta1
