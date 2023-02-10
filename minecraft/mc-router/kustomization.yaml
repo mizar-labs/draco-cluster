@@ -1,5 +1,4 @@
 kind: Kustomization
 resources:
-  - all-the-mods-8
-  - mc-router
+  - install.yaml
 apiVersion: kustomize.config.k8s.io/v1beta1
