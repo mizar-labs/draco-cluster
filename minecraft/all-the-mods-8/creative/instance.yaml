@@ -51,7 +51,7 @@ spec:
         - name: minecraftServer.query.enabled
           value: 'true'
         - name: minecraftServer.ops
-          value: ServerGopher, Strange_Quark
+          value: ServerGopher,Strange_Quark
     chart: minecraft
   destination:
     server: 'https://kubernetes.default.svc'
