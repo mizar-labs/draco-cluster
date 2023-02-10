@@ -39,7 +39,7 @@ spec:
         - name: minecraftServer.gameMode
           value: survival
         - name: minecraftServer.motd
-          value: All the mods 8 Creative Mode
+          value: All the mods 8 Survival Mode
         - name: minecraftServer.rcon.existingSecret
           value: minecraft-secrets
         - name: minecraftServer.rcon.secretKey
