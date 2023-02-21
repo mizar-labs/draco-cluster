@@ -1,0 +1,6 @@
+kind: Kustomization
+namespace: satisfactory
+resources:
+  - statefulset.yaml
+  - service.yaml
+apiVersion: kustomize.config.k8s.io/v1beta1
