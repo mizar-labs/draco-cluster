@@ -15,7 +15,7 @@ spec:
         - name: livenessProbe.initialDelaySeconds
           value: '600'
         - name: mcbackup.persistence.backupDir.Size
-          value: 40Gi
+          value: 100Gi
         - name: mcbackup.enabled
           value: 'true'
         - name: mcbackup.persistence.backupDir.enabled
